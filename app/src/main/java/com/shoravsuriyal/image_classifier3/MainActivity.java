@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private static final int IMAGE_MEAN = 128;
     private static final float IMAGE_STD = 128.0f;
 
-
     static {
 
         System.loadLibrary("tensorflow_inference");
