@@ -52,22 +52,22 @@ public class MainActivity extends AppCompatActivity {
         Matrix matrix = new Matrix();
         matrix.postScale(scale_factor,scale_factor);
 
-        Bitmap croppedBitmap;
-        if(landscape){
-
-            int start=(bitmap.getWidth()-bitmap.getHeight())/2;
-            croppedBitmap= Bitmap.createBitmap(bitmap,start,0,bitmap.getHeight()-1,bitmap.getHeight()-1,matrix,true);
-
-        } else {
-
-            int start= (bitmap.getHeight()-bitmap.getWidth())/2;
-            croppedBitmap=Bitmap.createBitmap(bitmap,0,start,bitmap.getWidth()-1,bitmap.getWidth()-1,matrix,true);
-
-        }
+//        Bitmap croppedBitmap;
+//        if(landscape){
+//
+//            int start=(bitmap.getWidth()-bitmap.getHeight())/2;
+//            croppedBitmap= Bitmap.createBitmap(bitmap,start,0,bitmap.getHeight()-1,bitmap.getHeight()-1,matrix,true);
+//
+//        } else {
+//
+//            int start= (bitmap.getHeight()-bitmap.getWidth())/2;
+//            croppedBitmap=Bitmap.createBitmap(bitmap,0,start,bitmap.getWidth()-1,bitmap.getWidth()-1,matrix,true);
+//
+//        }
 
         int pixels[]=new int[IMAGE_SIZE*IMAGE_SIZE];
 
-        croppedBitmap.getPixels(pixels,0,IMAGE_SIZE,0,0,IMAGE_SIZE,IMAGE_SIZE);
+        //croppedBitmap.getPixels(pixels,0,IMAGE_SIZE,0,0,IMAGE_SIZE,IMAGE_SIZE);
         float[] retPixels=new float[3*pixels.length];
         for (int i=0; i<pixels.length; ++i){
 
